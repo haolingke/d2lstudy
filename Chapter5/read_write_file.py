@@ -9,8 +9,6 @@ mydict = {'x': x, 'y': y}
 torch.save(mydict, 'mydict')
 mydict2 = torch.load('mydict')
 
-
-
 class MLP(nn.Module):
     def __init__(self):
         super().__init__()
