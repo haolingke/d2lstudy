@@ -68,3 +68,8 @@ Y = net(X)
 print(Y.shape)
 print(X.shape)
 summary(net,input_size=(1,96,96))
+
+"""RuntimeError: Input type (torch.cuda.FloatTensor) 
+and weight type (torch.FloatTensor) should be the same
+:这个错误提示是由于模型的权重在 CPU 上，而输入数据在 GPU 上。
+要解决这个问题，您可以将模型和输入数据都放在同一个设备上，例如 GPU 或 CPU。"""
